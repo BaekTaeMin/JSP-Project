@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>loginProc</title>
 </head>
 <body>
 <%@ include file="dbconn.jsp" %>
