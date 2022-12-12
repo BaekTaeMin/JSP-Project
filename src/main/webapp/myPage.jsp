@@ -19,8 +19,7 @@
 			$(this).closest('.navbar-minimal').toggleClass('open');
 		})
 		});
-	</script>
-
+</script>
 <body>
 <%@ include file="dbconn.jsp" %>
 <%
