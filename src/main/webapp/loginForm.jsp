@@ -10,7 +10,6 @@
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <link href="css/loginForm.css" rel="stylesheet" type="text/css">
 </head>
-
 <body>
 <script type="text/javascript">
 	function check() {
