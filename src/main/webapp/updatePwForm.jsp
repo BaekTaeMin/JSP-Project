@@ -20,7 +20,6 @@
 			  <form action="updatePwProc.jsp" name="frm" onsubmit="return check()">
               <h2 class="fw-bold mb-2 text-uppercase">비밀번호 변경</h2>
               <p class="text-white-50 mb-3">변경할 비밀번호를 입력해주세요</p>
-              
               <div class="form-outline form-white mb-4">
               	<label class="form-label" for="typeNpwX">New Password</label>
                 <input type="password" id="typeNpwX" class="form-control form-control-lg" placeholder="New Password" name="newPw"/>

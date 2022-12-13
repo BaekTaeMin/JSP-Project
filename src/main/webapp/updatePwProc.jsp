@@ -6,12 +6,11 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>비밀번호 변경 진행</title>
 </head>
 <body>
 <%@ include file="dbconn.jsp" %>
 <%
-	request.setCharacterEncoding("utf-8");
 	String user_id = (String) session.getAttribute("user_id");
 	String newPw = request.getParameter("newPw");
 	String conPw = request.getParameter("conPw");
@@ -36,7 +35,6 @@
 		
 	pstat.close();
 	conn.close();
-	
 %>
 <jsp:forward page="updatePwResult.jsp"></jsp:forward>
 </body>
