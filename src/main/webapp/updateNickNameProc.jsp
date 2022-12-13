@@ -6,12 +6,11 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>닉네임 변경 진행</title>
 </head>
 <body>
 <%@ include file="dbconn.jsp" %>
 <%
-	request.setCharacterEncoding("utf-8");
 	String newNickName = request.getParameter("nickName");
 	String user_id = (String) session.getAttribute("user_id");
 	int result = 0;

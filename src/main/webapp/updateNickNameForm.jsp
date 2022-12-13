@@ -32,7 +32,7 @@
               	<label class="form-label" for="typeIDX">NickName</label>
                 <input type="text" id="typeIDX" class="form-control form-control-lg" placeholder="New NickName" name="nickName" autofocus="autofocus"/>
               </div>
-              <br><br><br>
+              <br><br>
               <button class="btn btn-outline-light btn-lg px-5" type="submit">확인</button><br><br>
               </form>
 			  <button class="btn btn-outline-light btn-lg px-5" onclick="location.href='myPage.jsp'">돌아가기</button>              

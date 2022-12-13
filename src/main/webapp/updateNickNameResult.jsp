@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>닉네임 변경 결과</title>
 </head>
 <body>
 <c:choose>
