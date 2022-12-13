@@ -13,43 +13,9 @@
 <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 <link href="css/main.css" rel="stylesheet" type="text/css">
 </head>
-<%@ include file="dbconn.jsp" %>
 <%
-	String user_id = null;
-	String user_pw = null;
-	String user_email = null;
-	String user_nickName = null;
-	
-	if( session.getAttribute("user_id") != null) {
-		user_id = (String)session.getAttribute("user_id");
-	}
-	
+	String user_nickName = (String)session.getAttribute("user_nickName");
 	request.setCharacterEncoding("utf-8");
-	
-	PreparedStatement pstat = null;
-	ResultSet rs = null;
-	
-	String sql1 = "select * from User where id=?";
-	
-	pstat = conn.prepareStatement(sql1);
-	pstat.setString(1, user_id);
-	rs = pstat.executeQuery();
-	
-	while(rs.next()) {
-		user_id = rs.getString("id");
-		user_pw = rs.getString("pw");
-		user_email = rs.getString("email");
-		user_nickName = rs.getString("nickName");
-	}
-	
-	session.setAttribute("user_id", user_id);
-	session.setAttribute("user_pw", user_pw);
-	session.setAttribute("user_email", user_email);
-	session.setAttribute("user_nickName", user_nickName);
-	
-	rs.close();
-	pstat.close();
-	conn.close();
 %>
 <script>
 		$(function () {	    
