@@ -5,13 +5,11 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>일정 수정 진행</title>
 </head>
 <body>
 <%@ include file="dbconn.jsp" %>
 <%
-	request.setCharacterEncoding("utf-8");
-
 	String id = (String) session.getAttribute("user_id");
 	String month = request.getParameter("updateMonth");
 	String day = request.getParameter("updateDay");
@@ -31,7 +29,7 @@
 	pstat.setString(1, month);
 	pstat.setString(2, day);
 	pstat.setString(3, title);
-	pstat.setString(4, content); //여기까지 바꿀 내용
+	pstat.setString(4, content);
 	pstat.setString(5, id);
 	pstat.setString(6, pastMonth);
 	pstat.setString(7, pastDay);

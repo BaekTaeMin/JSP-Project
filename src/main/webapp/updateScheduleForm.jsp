@@ -1,7 +1,6 @@
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.PreparedStatement"%>
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -22,8 +21,6 @@
 	if( session.getAttribute("user_id") != null) {
 		user_id = (String)session.getAttribute("user_id");
 	}
-	
-	request.setCharacterEncoding("utf-8");
 	
 	PreparedStatement pstat = null;
 	ResultSet rs = null;

@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>일정 수정 결과</title>
 </head>
 <body>
 <c:choose>
