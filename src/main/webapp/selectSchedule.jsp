@@ -7,7 +7,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>일정 선택</title>
 <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
 <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
@@ -28,16 +28,6 @@
 	if( session.getAttribute("user_id") != null) {
 		user_id = (String)session.getAttribute("user_id");
 	}
-	
-	request.setCharacterEncoding("utf-8");
-	
-	PreparedStatement pstat1 = null;
-	ResultSet rs1 = null;
-	String sql4 = "select * from User where id=?";
-	
-	pstat1 = conn.prepareStatement(sql4);
-	pstat1.setString(1, user_id);
-	rs1 = pstat1.executeQuery();
 	
 	String user_nickName = null;
 	user_nickName = (String)session.getAttribute("user_nickName");
@@ -125,7 +115,6 @@
 					schedule.setContent(rs.getString("content"));
 					list.add(schedule);
 					int i = 0;
-				
 			%>
 			<li class="menubar">
 				<time datetime>
