@@ -6,10 +6,10 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>회원가입 진행</title>
 </head>
 <body>
-<%@ include file="dbconn.jsp" %> <!-- dbconn.jsp를 포함한다. -->
+<%@ include file="dbconn.jsp" %>
 <%
 		request.setCharacterEncoding("utf-8");
 		String id = request.getParameter("id");
@@ -26,17 +26,14 @@
 		int idChk = 0;
 		int result = 0;
 		int pwChk = 0;
-		
-		// PreparedStatement 생성 => 테이블에 아이디가 이미 있는지 체크
+
 		pstat = conn.prepareStatement(sql1);
 		pstat.setString(1, id);
 		rs = pstat.executeQuery();
 		
 		if(rs.next()) {
-			//테이블에 아이디가 있는 경우
 			idChk = 1;
 		} else {
-			//테이블에 아이디가 없는 경우 신규등록 가능
 			String sql2 = "insert into User values (?,?,?,?)";
 			pstat = conn.prepareStatement(sql2);
 			pstat.setString(1, id);
@@ -47,14 +44,12 @@
 			if(!pw.equals(pwc)) {
 				pwChk = 1;
 			}else {
-				//쿼리 실행
 				result = pstat.executeUpdate();	
 			}
 		}
 		request.setAttribute("result", result);
 		request.setAttribute("idChk", idChk);
 		request.setAttribute("pwChk", pwChk);
-		session.setAttribute("user_nickName", nickName);
 		
 		rs.close();
 		pstat.close();
