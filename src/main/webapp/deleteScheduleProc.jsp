@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>일정 삭제 진행</title>
 </head>
 <body>
 <%@ include file="dbconn.jsp" %>
