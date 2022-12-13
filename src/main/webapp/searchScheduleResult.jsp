@@ -29,16 +29,6 @@
 		user_id = (String)session.getAttribute("user_id");
 	}
 	
-	request.setCharacterEncoding("utf-8");
-	
-	PreparedStatement pstat1 = null;
-	ResultSet rs1 = null;
-	String sql4 = "select * from User where id=?";
-	
-	pstat1 = conn.prepareStatement(sql4);
-	pstat1.setString(1, user_id);
-	rs1 = pstat1.executeQuery();
-	
 	String user_nickName = null;
 	user_nickName = (String)session.getAttribute("user_nickName");
 %>
@@ -115,11 +105,10 @@
 	ResultSet rs = null;
 	
 	ArrayList<Schedule> list = new ArrayList<>();
-	if(month.equals("--") && !title.equals("")) { //month는 안고르고 title로 찾겠다.
+	if(month.equals("--") && !title.equals("")) {
 		String sql1 = "Select * From Schedule Where id=? and title like '%" + title + "%'";
 		pstat = conn.prepareStatement(sql1);
 		pstat.setString(1, id);
-		/* pstat.setString(2, title); */
 		rs = pstat.executeQuery();
 		
 		while(rs.next()) {
