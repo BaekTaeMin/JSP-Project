@@ -17,6 +17,8 @@
 	
 	String user_id = null;
 	String user_pw = null;
+	String user_email = null;
+	String user_nickName = null;
 	
 	PreparedStatement pstat = null;
 	ResultSet rs = null;
@@ -42,11 +44,16 @@
 			idChk = 0;
 			pwChk = 0;
 		}
+		user_email = rs.getString("email");
+		user_nickName = rs.getString("nickName");
 	}
 	request.setAttribute("result", result);
 	request.setAttribute("idChk", idChk);
 	request.setAttribute("pwChk", pwChk);
-	session.setAttribute("user_id",user_id);
+	session.setAttribute("user_id", user_id);
+	session.setAttribute("user_pw", user_pw);
+	session.setAttribute("user_email", user_email);
+	session.setAttribute("user_nickName", user_nickName);
 	
 	rs.close();
 	pstat.close();
