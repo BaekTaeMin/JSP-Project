@@ -13,7 +13,7 @@
 <link href="css/main.css" rel="stylesheet" type="text/css">
 </head>
 <%
-	String user_nickName = null;
+	String user_nickName = (String)session.getAttribute("user_nickName");
 	request.setCharacterEncoding("utf-8");
 %>
 <script>
